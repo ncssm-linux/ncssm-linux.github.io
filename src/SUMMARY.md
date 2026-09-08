@@ -6,6 +6,6 @@
 - [Connecting to the VPN](./vpn.md)
 - [Class-specific software](./class.md)
     - [Vernier software](./class/vernier.md)
-    - [VEXcode]()
+    - [VEXcode](./class/vex.md)
     - [Others?]()
 - [Printing](./printing.md)
