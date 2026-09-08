@@ -1,4 +1,7 @@
 [book]
 title = "The NCSSM Linux User's Guide (Unofficial)"
-authors = ["surv"]
+authors = ["Sam Steed"]
 language = "en"
+
+[build]
+build-dir = "docs"
