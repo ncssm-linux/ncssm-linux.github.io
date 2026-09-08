@@ -8,4 +8,4 @@
     - [Vernier software]()
     - [VEX coding]()
     - [Others?]()
-- [Printing]()
+- [Printing](./printing.md)

@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Class-specific software - The NCSSM Linux User&#x27;s Guide (Unofficial)</title>
+        <title>Printing - The NCSSM Linux User&#x27;s Guide (Unofficial)</title>
 
 
         <!-- Custom HTML head -->
@@ -174,21 +174,30 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="class-specific-software"><a class="header" href="#class-specific-software">Class-specific software</a></h1>
-<p>This section covers software you might need for a particular class that isn’t supported on Linux.</p>
-<p>Help is always appreciated in this section!</p>
+                        <h1 id="printing"><a class="header" href="#printing">Printing</a></h1>
+<p>The daunting task of printing at NCSSM on Linux is finally documented!</p>
+<p>First you will of course need to install <a href="https://wiki.archlinux.org/title/CUPS">CUPS</a> on your distro.</p>
+<p>The rest of this guide will use the CUPS GUI which can be accessed from your browser at
+<a href="http://localhost:631/">http://localhost:631/</a>.</p>
+<p>Go to the Administration tab and click “Add Printer”. Choose “Internet Printing Protocol (ipps)”.</p>
+<p>For the connection URI, enter:</p>
+<p><code>ipps://papercut.ncssm.edu:9164/printers/Copier_Queue</code></p>
+<p><em>(This was the hard part to discover. It’s not documented and I had to find it with a bit of brute force.)</em></p>
+<p>Fill in the human-readable details as you like, hit Continue, and select <strong>Generic</strong> &gt; <strong>IPP Everywhere ™</strong> as the driver. Now you can add the printer!</p>
+<p>To print something, select the <code>Copier_Queue</code> printer (or whatever you named it).
+The first time you do it, you should be prompted to log in.
+You might need to use the system dialog the first time or the job will hang and not prompt you.
+Log in with your NCSSM credentials and you should be able to submit a print job!</p>
+<p>Then just go to the physical printer, tab your fob, and release the job to print your document.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="vpn.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="class.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="printing.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -196,13 +205,10 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="vpn.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="class.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="printing.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>

@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-9b6698b4.js";
+            window.path_to_searchindex_js = "searchindex-52fddf54.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-8e38911c.js"></script>
+        <script src="toc-c30b6a62.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -238,6 +238,22 @@ You should be prompted to login with your NCSSM Google account, and then you mus
 <h1 id="class-specific-software"><a class="header" href="#class-specific-software">Class-specific software</a></h1>
 <p>This section covers software you might need for a particular class that isn’t supported on Linux.</p>
 <p>Help is always appreciated in this section!</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="printing"><a class="header" href="#printing">Printing</a></h1>
+<p>The daunting task of printing at NCSSM on Linux is finally documented!</p>
+<p>First you will of course need to install <a href="https://wiki.archlinux.org/title/CUPS">CUPS</a> on your distro.</p>
+<p>The rest of this guide will use the CUPS GUI which can be accessed from your browser at
+<a href="http://localhost:631/">http://localhost:631/</a>.</p>
+<p>Go to the Administration tab and click “Add Printer”. Choose “Internet Printing Protocol (ipps)”.</p>
+<p>For the connection URI, enter:</p>
+<p><code>ipps://papercut.ncssm.edu:9164/printers/Copier_Queue</code></p>
+<p><em>(This was the hard part to discover. It’s not documented and I had to find it with a bit of brute force.)</em></p>
+<p>Fill in the human-readable details as you like, hit Continue, and select <strong>Generic</strong> &gt; <strong>IPP Everywhere ™</strong> as the driver. Now you can add the printer!</p>
+<p>To print something, select the <code>Copier_Queue</code> printer (or whatever you named it).
+The first time you do it, you should be prompted to log in.
+You might need to use the system dialog the first time or the job will hang and not prompt you.
+Log in with your NCSSM credentials and you should be able to submit a print job!</p>
+<p>Then just go to the physical printer, tab your fob, and release the job to print your document.</p>
 
                     </main>
 
