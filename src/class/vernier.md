@@ -1,4 +1,4 @@
-# Vernier Software
+# Vernier software
 
 Vernier software is used in many Physics classes at NCSSM.
 
