@@ -17,6 +17,7 @@ or a Chromium-based browser.
 Then you should be able to use the programs at their websites:
 - [graphicalanalysis.app](https://graphicalanalysis.app)
 - [videoanalysis.app](https://videoanalysis.app/)
+    - This one doesn't involve external devices, so you won't need Chromium.
     - You will need [NCSSM's license key](https://docs.google.com/document/d/1Mdrd5bJWMRqREADwXhExjfCGkQcm3gMLwTpOVBvvLHI/edit)
 - [spectralanalysis.app](https://spectralanalysis.app)
 
