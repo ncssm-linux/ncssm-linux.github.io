@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Connecting to eduroam - The NCSSM Linux User&#x27;s Guide (Unofficial)</title>
+        <title>Connecting to the VPN - The NCSSM Linux User&#x27;s Guide (Unofficial)</title>
 
 
         <!-- Custom HTML head -->
@@ -174,62 +174,24 @@
 
                 <div id="mdbook-content" class="content">
                     <main>
-                        <h1 id="connecting-to-eduroam"><a class="header" href="#connecting-to-eduroam">Connecting to eduroam</a></h1>
-<p>The first step to doing anything is, of course, to connect to the <code>eduroam</code> network.</p>
-<p>Here’s how to do that with your networking system:</p>
-<h2 id="networkmanager"><a class="header" href="#networkmanager">NetworkManager</a></h2>
-<p><em>Read about <a href="https://wiki.archlinux.org/title/NetworkManager">NetworkManager</a> on the Arch Linux Wiki</em></p>
-<h3 id="gui-nm-connection-editor"><a class="header" href="#gui-nm-connection-editor">GUI (nm-connection-editor)</a></h3>
-<p>Using the NetworkManager GUI, simply detect the <code>eduroam</code> network and then configure it like this:</p>
-<ul>
-<li><strong>Authentication</strong>: Protected EAP (PEAP)</li>
-<li><strong>No CA certificate is required</strong></li>
-<li><strong>Username</strong>: (your NCSSM email)</li>
-<li><strong>Password</strong>: (your NCSSM account password)</li>
-</ul>
-<h3 id="connection-file"><a class="header" href="#connection-file">Connection File</a></h3>
-<p>The following is a template <code>.nmconnection</code> file to place in <code>/etc/NetworkManager/system-connections/</code>.</p>
-<p>You can get your interface device by running <code>nmcli device</code> and looking for the one labeled <code>wifi</code>.</p>
-<pre><code class="language-ini">[connection]
-id=eduroam
-uuid=08627a59-7595-456a-a7c8-6b9b21beeb3b # &lt;or generate a UUID&gt;
-type=wifi
-interface-name=&lt;your interface ex. wlp170s0&gt;
-
-[wifi]
-mode=infrastructure
-ssid=eduroam
-
-[wifi-security]
-key-mgmt=wpa-eap
-
-[802-1x]
-eap=peap;
-identity=&lt;NCSSM email&gt;
-password=&lt;NCSSM password&gt;
-phase2-auth=mschapv2
-
-[ipv4]
-method=auto
-
-[ipv6]
-addr-gen-mode=stable-privacy
-method=auto
-</code></pre>
-<h2 id="others"><a class="header" href="#others">Others?</a></h2>
-<p>If there’s any other networking system you use please contribute a guide for it!</p>
+                        <h1 id="connecting-to-the-vpn"><a class="header" href="#connecting-to-the-vpn">Connecting to the VPN</a></h1>
+<p>NCSSM uses the GlobalProtect VPN to allow you to connect to services on the NCSSM network
+from non-eduroam networks.</p>
+<p>Additionally, some things, like the NCSSM Github server, are only accessible this way.</p>
+<p>You will need to use <a href="https://github.com/yuezk/GlobalProtect-openconnect">this client</a> to connect to the VPN.
+Scroll down to the “Installation” section for instructions for your distro.</p>
+<p>However, the GUI is paid proprietary software, so we will need to use the command line interface.</p>
+<p>Once you have installed the client, simply run <strong><code>sudo gpclient connect fw.ncssm.edu</code></strong> (<code>fw.ncssm.edu</code> is the portal address).
+You should be prompted to login with your NCSSM Google account, and then you must leave the program running to use the VPN.</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="wifi.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
 
-                            <a rel="next prefetch" href="vpn.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -237,13 +199,10 @@ method=auto
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="wifi.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
 
-                    <a rel="next prefetch" href="vpn.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
-                    </a>
             </nav>
 
         </div>

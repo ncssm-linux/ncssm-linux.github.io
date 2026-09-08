@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-b9ee7b3d.js";
+            window.path_to_searchindex_js = "searchindex-5739d498.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-244fe3ac.js"></script>
+        <script src="toc-1c8301b9.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -224,6 +224,16 @@ method=auto
 </code></pre>
 <h2 id="others"><a class="header" href="#others">Others?</a></h2>
 <p>If there’s any other networking system you use please contribute a guide for it!</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="connecting-to-the-vpn"><a class="header" href="#connecting-to-the-vpn">Connecting to the VPN</a></h1>
+<p>NCSSM uses the GlobalProtect VPN to allow you to connect to services on the NCSSM network
+from non-eduroam networks.</p>
+<p>Additionally, some things, like the NCSSM Github server, are only accessible this way.</p>
+<p>You will need to use <a href="https://github.com/yuezk/GlobalProtect-openconnect">this client</a> to connect to the VPN.
+Scroll down to the “Installation” section for instructions for your distro.</p>
+<p>However, the GUI is paid proprietary software, so we will need to use the command line interface.</p>
+<p>Once you have installed the client, simply run <strong><code>sudo gpclient connect fw.ncssm.edu</code></strong> (<code>fw.ncssm.edu</code> is the portal address).
+You should be prompted to login with your NCSSM Google account, and then you must leave the program running to use the VPN.</p>
 
                     </main>
 
