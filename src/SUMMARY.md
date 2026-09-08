@@ -5,7 +5,7 @@
 - [Connecting to eduroam](./wifi.md)
 - [Connecting to the VPN](./vpn.md)
 - [Class-specific software](./class.md)
-    - [Vernier software]()
+    - [Vernier software](./class/vernier.md)
     - [VEX coding]()
     - [Others?]()
 - [Printing](./printing.md)

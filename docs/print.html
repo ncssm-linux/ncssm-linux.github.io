@@ -36,10 +36,10 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-b2b9e523.js";
+            window.path_to_searchindex_js = "searchindex-7d87c583.js";
         </script>
         <!-- Start loading toc.js asap -->
-        <script src="toc-c30b6a62.js"></script>
+        <script src="toc-613fe5a7.js"></script>
     </head>
     <body>
     <div id="mdbook-help-container">
@@ -238,6 +238,32 @@ You should be prompted to login with your NCSSM Google account, and then you mus
 <h1 id="class-specific-software"><a class="header" href="#class-specific-software">Class-specific software</a></h1>
 <p>This section covers software you might need for a particular class that isn’t supported on Linux.</p>
 <p>Help is always appreciated in this section!</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="vernier-software"><a class="header" href="#vernier-software">Vernier Software</a></h1>
+<p>Vernier software is used in many Physics classes at NCSSM.</p>
+<p>Vernier software is proprietary and does not support Linux operating systems.</p>
+<p>However, the tools do have web versions (though teachers will not recommend them).</p>
+<h2 id="web-versions"><a class="header" href="#web-versions">Web Versions</a></h2>
+<p>The web versions of Vernier software use <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebUSB_API">WebUSB</a>,
+an experimental web API that Firefox-based browsers do not support citing security concerns.</p>
+<p>The simplest way to use Vernier software is just to use <a href="https://wiki.archlinux.org/title/Chromium">Chromium</a>
+or a Chromium-based browser.</p>
+<p>Then you should be able to use the programs at their websites:</p>
+<ul>
+<li><a href="https://graphicalanalysis.app">graphicalanalysis.app</a></li>
+<li><a href="https://videoanalysis.app/">videoanalysis.app</a>
+<ul>
+<li>You will need <a href="https://docs.google.com/document/d/1Mdrd5bJWMRqREADwXhExjfCGkQcm3gMLwTpOVBvvLHI/edit">NCSSM’s license key</a></li>
+</ul>
+</li>
+<li><a href="https://spectralanalysis.app">spectralanalysis.app</a></li>
+</ul>
+<p>[Please verify that this actually works and you are able to connect to devices this way.]</p>
+<h2 id="notes-about-native-builds"><a class="header" href="#notes-about-native-builds">Notes about Native Builds</a></h2>
+<p>Vernier uses Electron! That would mean it’s easy to make a script that takes a Windows binary and extracts
+all the Electron files, and runs them with your native Electron build, but… they use a native module. So until we
+can get a Linux build of that module, it won’t be possible to run Vernier natively.</p>
+<p>You can try running through Wine but you’ll be missing a few DLLs and… at that point just use the web version.</p>
 <div style="break-before: page; page-break-before: always;"></div>
 <h1 id="printing"><a class="header" href="#printing">Printing</a></h1>
 <p>The daunting task of printing at NCSSM on Linux is finally documented!</p>
