@@ -2,7 +2,7 @@
 
 The daunting task of printing at NCSSM on Linux is finally documented!
 
-First you will of course need to install [CUPS](https://wiki.archlinux.org/title/CUPS) on your system.
+First you will of course need to install and enable [CUPS](https://wiki.archlinux.org/title/CUPS) on your system.
 
 The rest of this guide will use the CUPS GUI which can be accessed from your browser at
 [http://localhost:631/](http://localhost:631/). Log in with your username and password (for your own system) to get access.
