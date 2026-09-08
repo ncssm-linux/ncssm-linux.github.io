@@ -25,9 +25,9 @@ You can get your interface device by running `nmcli device` and looking for the 
 ```ini
 [connection]
 id=eduroam
-uuid=08627a59-7595-456a-a7c8-6b9b21beeb3b # [or generate a UUID]
+uuid=08627a59-7595-456a-a7c8-6b9b21beeb3b # <or generate a UUID>
 type=wifi
-interface-name=[your interface ex. wlp170s0]
+interface-name=<your interface ex. wlp170s0>
 
 [wifi]
 mode=infrastructure
@@ -38,8 +38,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=peap;
-identity=[NCSSM email]
-password=[NCSSM password]
+identity=<NCSSM email>
+password=<NCSSM password>
 phase2-auth=mschapv2
 
 [ipv4]

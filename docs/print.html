@@ -36,7 +36,7 @@
             const path_to_root = "";
             const default_light_theme = "light";
             const default_dark_theme = "navy";
-            window.path_to_searchindex_js = "searchindex-f683fca9.js";
+            window.path_to_searchindex_js = "searchindex-9e404ae7.js";
         </script>
         <!-- Start loading toc.js asap -->
         <script src="toc-244fe3ac.js"></script>
@@ -198,9 +198,9 @@
 <p>You can get your interface device by running <code>nmcli device</code> and looking for the one labeled <code>wifi</code>.</p>
 <pre><code class="language-ini">[connection]
 id=eduroam
-uuid=08627a59-7595-456a-a7c8-6b9b21beeb3b # [or generate a UUID]
+uuid=08627a59-7595-456a-a7c8-6b9b21beeb3b # &lt;or generate a UUID&gt;
 type=wifi
-interface-name=[your interface ex. wlp170s0]
+interface-name=&lt;your interface ex. wlp170s0&gt;
 
 [wifi]
 mode=infrastructure
@@ -211,8 +211,8 @@ key-mgmt=wpa-eap
 
 [802-1x]
 eap=peap;
-identity=[NCSSM email]
-password=[NCSSM password]
+identity=&lt;NCSSM email&gt;
+password=&lt;NCSSM password&gt;
 phase2-auth=mschapv2
 
 [ipv4]
